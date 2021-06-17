@@ -20,7 +20,7 @@ let package = Package(
                 publicHeadersPath: ""),
         .target(name: "GCDWebUploader",
                 dependencies: ["GCDWebServer"],
-                resources: [.copy("GCDWebUploader.bundle")],
+                resources: [.copy("../GCDWebUploader.bundle")],
                 publicHeadersPath: ""),
         .testTarget(name: "ColorExtensionTests",
                     dependencies: ["ColorExtension", "Animals", "GCDWebServer", "GCDWebDAVServer", "GCDWebUploader"])
