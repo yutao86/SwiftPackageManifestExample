@@ -10,13 +10,19 @@ let package = Package(
     ],
     targets: [
         .target(name: "ColorExtension"),
-        .target(name: "Animals", publicHeadersPath: ""),
-        .target(name: "GCDWebServer", publicHeadersPath: ""),
-        .target(name: "GCDWebDAVServer", dependencies: ["GCDWebServer"], publicHeadersPath: ""),
+        .target(name: "Animals",
+                resources: [.copy("poodle.png")],
+                publicHeadersPath: ""),
+        .target(name: "GCDWebServer",
+                publicHeadersPath: ""),
+        .target(name: "GCDWebDAVServer",
+                dependencies: ["GCDWebServer"],
+                publicHeadersPath: ""),
         .target(name: "GCDWebUploader",
                 dependencies: ["GCDWebServer"],
                 resources: [.copy("GCDWebUploader.bundle")],
                 publicHeadersPath: ""),
-        .testTarget(name: "ColorExtensionTests", dependencies: ["ColorExtension", "Animals", "GCDWebServer", "GCDWebDAVServer", "GCDWebUploader"])
+        .testTarget(name: "ColorExtensionTests",
+                    dependencies: ["ColorExtension", "Animals", "GCDWebServer", "GCDWebDAVServer", "GCDWebUploader"])
     ]
 )
