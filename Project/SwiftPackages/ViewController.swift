@@ -6,13 +6,13 @@
 //
 
 import UIKit
-import MyUtilities
+import ColorExtension
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = UIColor()
+        view.backgroundColor = UIColor(RGB: 0x000000)
     }
 }
 

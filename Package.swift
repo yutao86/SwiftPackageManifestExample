@@ -10,5 +10,6 @@ let package = Package(
     ],
     targets: [
         .target(name: "ColorExtension"),
+        .testTarget(name: "ColorExtensionTests", dependencies: ["ColorExtension"])
     ]
 )
