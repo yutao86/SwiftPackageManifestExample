@@ -10,6 +10,7 @@ import ColorExtension
 import Animals
 import GCDWebServer
 import GCDWebDAVServer
+import GCDWebUploader
 
 class ViewController: UIViewController {
     
@@ -25,6 +26,9 @@ class ViewController: UIViewController {
         
         let webDAVServer = GCDWebDAVServer()
         print(webDAVServer)
+        
+        let uploader = GCDWebUploader()
+        print(uploader)
     }
 }
 
