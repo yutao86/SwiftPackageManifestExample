@@ -3,6 +3,8 @@
     @testable import Animals
     @testable import GCDWebServer
     @testable import GCDWebDAVServer
+    @testable import GCDWebUploader
+
     
     final class GCDWebServerTTests: XCTestCase {
         func testExample() {
@@ -15,6 +17,9 @@
             
             let webDAVServer = GCDWebDAVServer()
             print(webDAVServer)
+            
+            let uploader = GCDWebUploader()
+            print(uploader)
             
             XCTAssertNotNil(UIColor(RGB: 0x000000))
         }

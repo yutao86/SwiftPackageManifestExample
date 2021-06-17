@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/yutao86/example-swift-package-manifest.git",
         "state": {
           "branch": null,
-          "revision": "93b0409cbe2b62e880dc190bca5fed72ed620708",
-          "version": "0.0.9"
+          "revision": "a9e91a78fb76dff084d7c58bff34edf17d0c355e",
+          "version": "0.0.11"
         }
       }
     ]
