@@ -6,10 +6,11 @@ let package = Package(
     name: "MyUtilities",
     platforms: [.iOS(.v12)],
     products: [
-        .library(name: "MyUtilities", targets: ["ColorExtension"]),
+        .library(name: "MyUtilities", targets: ["ColorExtension", "Animals"]),
     ],
     targets: [
         .target(name: "ColorExtension"),
-        .testTarget(name: "ColorExtensionTests", dependencies: ["ColorExtension"])
+        .target(name: "Animals", publicHeadersPath: ""),
+        .testTarget(name: "ColorExtensionTests", dependencies: ["ColorExtension", "Animals"])
     ]
 )

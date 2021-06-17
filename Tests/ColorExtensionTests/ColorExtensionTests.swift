@@ -1,5 +1,6 @@
     import XCTest
     @testable import ColorExtension
+    @testable import Animals
 
     final class GCDWebServerTTests: XCTestCase {
         func testExample() {
