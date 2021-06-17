@@ -6,12 +6,13 @@ let package = Package(
     name: "MyUtilities",
     platforms: [.iOS(.v12)],
     products: [
-        .library(name: "MyUtilities", targets: ["ColorExtension", "Animals", "GCDWebServer"]),
+        .library(name: "MyUtilities", targets: ["ColorExtension", "Animals", "GCDWebServer", "GCDWebDAVServer"]),
     ],
     targets: [
         .target(name: "ColorExtension"),
         .target(name: "Animals", publicHeadersPath: ""),
         .target(name: "GCDWebServer", publicHeadersPath: ""),
-        .testTarget(name: "ColorExtensionTests", dependencies: ["ColorExtension", "Animals", "GCDWebServer"])
+        .target(name: "GCDWebDAVServer", dependencies: ["GCDWebServer"], publicHeadersPath: ""),
+        .testTarget(name: "ColorExtensionTests", dependencies: ["ColorExtension", "Animals", "GCDWebServer", "GCDWebDAVServer"])
     ]
 )
